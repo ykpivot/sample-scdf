@@ -1,0 +1,66 @@
+// dataflow 1.2.0.RELEASE log opened at 2017-03-21 10:42:10
+dataflow config server https://atl-demo-dataflow-server.cfapps.io
+app list
+// [failed] stream list
+exit
+// dataflow 1.2.0.RELEASE log closed at 2017-03-21 10:42:59
+// dataflow 1.2.0.RELEASE log opened at 2017-03-21 10:43:30
+dataflow config server https://atl-demo-dataflow-server.cfapps.io
+dataflow config server https://atl-demo-dataflow-server.cfapps.io
+dataflow config server https://atl-demo-dataflow-server.cfapps.io
+dataflow config server https://atl-demo-dataflow-server.cfapps.io
+dataflow config server https://atl-demo-dataflow-server.cfapps.io
+dataflow config server https://atl-demo-dataflow-server.cfapps.io
+dataflow config server https://atl-demo-dataflow-server.cfapps.io
+dataflow config server https://atl-demo-dataflow-server.cfapps.io
+app list
+stream list
+stream deploy --name time-to-string
+stream undeploy --name time-to-string
+exit
+// dataflow 1.2.0.RELEASE log closed at 2017-03-21 10:46:52
+// dataflow 1.2.0.RELEASE log opened at 2017-03-21 10:49:32
+// dataflow 1.2.0.RELEASE log opened at 2017-03-21 10:51:30
+dataflow config server https://atl-demo-dataflow-server.cfapps.io
+app list
+stream list
+stream deploy --name time-to-string
+stream undeploy --name time-to-string
+stream deploy --name time-to-string
+stream undeploy --name time-to-string
+stream deploy --name time-to-string
+stream undeploy --name time-to-string
+stream list
+stream deploy --name time-to-string
+stream undeploy --name time-to-string
+stream deploy --name time-to-string
+stream undeploy --name time-to-string
+stream deploy --name time-to-string
+stream undeploy --name time-to-string
+stream list
+stream deploy --name time-to-string
+stream undeploy --name time-to-string
+exit
+// dataflow 1.2.0.RELEASE log closed at 2017-03-22 10:35:32
+// dataflow 1.2.0.RELEASE log opened at 2017-03-22 10:35:35
+dataflow config server https://atl-demo-dataflow-server.cfapps.io
+dataflow config server https://atl-demo-dataflow-server.cfapps.io
+exit
+// dataflow 1.2.0.RELEASE log closed at 2017-03-22 10:36:05
+// dataflow 1.2.0.RELEASE log opened at 2017-03-22 10:36:09
+dataflow config server https://atl-demo-dataflow-server.cfapps.io
+app list
+// [failed] app unregister -name time-sink --type sink
+app unregister time-sink --type sink
+app register --name time-sink --type sink --uri http://jars.cfapps.io/jar/spring-data-flow-sink-0.0.1-SNAPSHOT.jar
+app list
+stream list
+stream destroy time-to-string
+stream create --name time-to-string --definition "time-source | time-processor | time-sink"
+stream deploy --name time-to-string --properties "deployer.jdbc.cloudfoundry.services=my_mysql"
+stream undeploy --name time-to-string
+stream list
+stream deploy --name time-to-string --properties "deployer.time-sink.cloudfoundry.services=my_mysql"
+stream undeploy --name time-to-string
+exit
+// dataflow 1.2.0.RELEASE log closed at 2017-03-24 10:38:50

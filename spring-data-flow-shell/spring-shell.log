@@ -1,0 +1,135 @@
+// dataflow 1.2.0.RELEASE log opened at 2017-03-16 10:08:07
+help
+app list
+app register --name time-source --type source --uri maven://org.ping.cloud:spring-data-flow-source:jar:0.0.1-SNAPSHOT
+app list
+// [failed] app register --name time-source --type source --uri maven://org.ping.cloud:spring-data-flow-processor:jar:0.0.1-SNAPSHOT
+// [failed] app register --name time-source --type source --uri maven://org.ping.cloud:spring-data-flow-processor:jar:0.0.1-SNAPSHOT
+// [failed] app register --name time-source --type source --uri maven://org.ping.cloud:spring-data-flow-processor:jar:0.0.1-SNAPSHOT
+app register --name time-processor --type processor --uri maven://org.ping.cloud:spring-data-flow-processor:jar:0.0.1-SNAPSHOT
+app register --name time-sink --type sink --uri maven://org.ping.cloud:spring-data-flow-sink:jar:0.0.1-SNAPSHOT
+app list
+stream create --name time-to-string --definition "time-source | time-processor | time-sink"
+// [failed] stream deploy --name time-to-string
+// [failed] stream deploy --name time-to-string
+// [failed] app register --name time-sink --type sink --uri maven://org.ping.cloud:spring-data-flow-sink:jar:0.0.1-SNAPSHOT
+// [failed] stream create --name time-to-string --definition "time-source | time-processor | time-sink"
+app list
+clear
+help
+app list
+stream list
+// [failed] stream deploy --name time-to-string
+app list
+app unregister --name time-sink --type sink
+app list
+app register --name time-sink --type sink --uri maven://org.ping.cloud:spring-data-flow-sink:jar:0.0.1-SNAPSHOT
+app list
+stream list
+// [failed] stream deploy --name time-to-string
+// [failed] stream deploy --name time-to-string
+help
+app unregister --name time-sink --type sink
+app list
+app register --name time-sink --type sink --uri maven://org.ping.cloud:spring-data-flow-sink:jar:0.0.1-SNAPSHOT
+app list
+// [failed] stream deploy --name time-to-string
+help
+app info sink:time-sink
+app info source:time-source
+// dataflow 1.2.0.RELEASE log opened at 2017-03-16 11:27:30
+app list
+stream list
+// [failed] stream deploy --name time-to-string
+app unregister --name time-sink --type sink
+// [failed] stream deploy --name time-to-string
+app register --name time-sink --type sink --uri maven://org.ping.cloud:spring-data-flow-sink:jar:0.0.1-SNAPSHOT
+// [failed] stream deploy --name time-to-string
+// [failed] stream deploy --name time-to-string
+// [failed] stream deploy --name time-to-string
+app list
+app register --name time-sink --type sink --uri maven://org.ping.cloud:spring-data-flow-sink:jar:0.0.1-SNAPSHOT
+app register --name time-processor --type processor --uri maven://org.ping.cloud:spring-data-flow-processor:jar:0.0.1-SNAPSHOT
+app register --name time-source --type source --uri maven://org.ping.cloud:spring-data-flow-source:jar:0.0.1-SNAPSHOT
+app list
+stream create --name time-to-string --definition "time-source | time-processor | time-sink"
+stream list
+// [failed] stream deploy --name time-to-string
+// [failed] app list
+// [failed] app list
+app list
+app register --name time-sink --type sink --uri maven://com.ping.cloud:spring-data-flow-sink:jar:0.0.1-SNAPSHOT
+app register --name time-source --type source --uri maven://com.ping.cloud:spring-data-flow-source:jar:0.0.1-SNAPSHOT
+app register --name time-processor --type processor --uri maven://com.ping.cloud:spring-data-flow-processor:jar:0.0.1-SNAPSHOT
+app list
+stream create --name time-to-string --definition "time-source | time-processor | time-sink"
+stream deploy --name time-to-string
+stream list
+stream undeploy --name time-to-string
+stream deploy --name time-to-string
+// [failed] stream undeploy --name time-to-string
+// [failed] stream create --name time-to-string --definition "time-source | time-processor | time-sink"
+// dataflow 1.2.0.RELEASE log opened at 2017-03-16 11:50:48
+app list
+app register --name time-source --type source --uri maven://com.ping.cloud:spring-data-flow-source:jar:0.0.1-SNAPSHOT
+app register --name time-processor --type processor --uri maven://com.ping.cloud:spring-data-flow-processor:jar:0.0.1-SNAPSHOT
+app register --name time-sink --type sink --uri maven://com.ping.cloud:spring-data-flow-sink:jar:0.0.1-SNAPSHOT
+app list
+stream create --name time-to-string --definition "time-source | time-processor | time-sink"
+stream list
+stream deploy --name time-to-string
+stream undeploy --name time-to-string
+stream deploy --name time-to-string
+stream undeploy --name time-to-string
+stream deploy --name time-to-string
+stream undeploy --name time-to-string
+stream deploy --name time-to-string
+stream undeploy --name time-to-string
+stream deploy --name time-to-string
+stream undeploy --name time-to-string
+stream deploy --name time-to-string
+stream undeploy --name time-to-string
+stream deploy --name time-to-string
+stream undeploy --name time-to-string
+exit
+// dataflow 1.2.0.RELEASE log closed at 2017-03-20 12:29:47
+// dataflow 1.2.0.RELEASE log opened at 2017-03-20 14:52:10
+app list
+app register --name time-source --type source --uri maven://com.ping.cloud:spring-data-flow-source:jar:0.0.1-SNAPSHOT
+app register --name time-processor --type processor --uri maven://com.ping.cloud:spring-data-flow-processor:jar:0.0.1-SNAPSHOT
+app register --name time-sink --type sink --uri maven://com.ping.cloud:spring-data-flow-sink:jar:0.0.1-SNAPSHOT
+app list
+stream create --name time-to-string --definition "time-source | time-processor | time-sink"
+stream list
+stream deploy --name time-to-string
+stream undeploy --name time-to-string
+exit
+// dataflow 1.2.0.RELEASE log closed at 2017-03-20 14:54:30
+// dataflow 1.2.0.RELEASE log opened at 2017-03-20 16:41:33
+stream list
+stream deploy --name time-to-string
+stream undeploy --name time-to-string
+stream deploy --name time-to-string
+stream undeploy --name time-to-string
+exit
+// dataflow 1.2.0.RELEASE log closed at 2017-03-20 16:47:12
+// dataflow 1.2.0.RELEASE log opened at 2017-03-21 10:30:08
+// dataflow 1.2.0.RELEASE log opened at 2017-03-21 10:31:53
+dataflow config server https://atl-demo-dataflow-server.cfapps.io
+app list
+app register --name time-processor --type processor --uri http://jars.cfapps.io/jar/spring-data-flow-processor-0.0.1-SNAPSHOT.jar
+app register --name time-source --type source --uri http://jars.cfapps.io/jar/spring-data-flow-source-0.0.1-SNAPSHOT.jar
+app register --name time-sink --type sink --uri http://jars.cfapps.io/jar/spring-data-flow-sink-0.0.1-SNAPSHOT.jar
+app list
+// [failed] stream create --name time-to-string --definition "time-source | time-processor | time-sink"
+// [failed] stream list
+// [failed] stream list
+exit
+// dataflow 1.2.0.RELEASE log closed at 2017-03-21 10:37:56
+// dataflow 1.2.0.RELEASE log opened at 2017-03-21 10:40:41
+dataflow config server https://atl-demo-dataflow-server.cfapps.io
+app list
+// [failed] stream create --name time-to-string --definition "time-source | time-processor | time-sink"
+// [failed] stream list
+exit
+// dataflow 1.2.0.RELEASE log closed at 2017-03-21 10:41:27

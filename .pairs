@@ -1,0 +1,9 @@
+pairs:
+  yk: Yosep Kim; yokim
+  kz: Konrad Zielinski; kzielinski
+  rd: Robbie Diaz; rdiaz
+email:
+  prefix: pair
+  domain: pivotal.io
+  no_solo_prefix: true
+  global: false
