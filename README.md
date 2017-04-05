@@ -1,4 +1,4 @@
-##Initial Setup
+## Initial Setup
 ````
 $ git clone https://github.com/ykpivot/sample-scdf.git
 $ cd sample-scdf
@@ -12,7 +12,7 @@ $ mvn install
 ````
 This will also install the jar to the local maven cache, which will be used, when running SCDF server locally.
 
-##Run locally
+## Run locally
 
 The sink app stores data in a mySql database, so you need to install it on your computer. Please find the schema information from the source code.
 
@@ -53,7 +53,7 @@ dataflow:> stream listdataflow:> stream deploy --name time-to-string
 
 In order to verify if the stream worked properly, log into your databse instance and see if records are created.
 
-##Run on CF
+## Run on CF
 
 Follow the instruction on the following page:
 [http://docs.spring.io/spring-cloud-dataflow-server-cloudfoundry/docs/current-SNAPSHOT/reference/htmlsingle/](http://docs.spring.io/spring-cloud-dataflow-server-cloudfoundry/docs/current-SNAPSHOT/reference/htmlsingle/)
@@ -86,7 +86,7 @@ dataflow:>stream create --name time-to-string --definition "time-source | time-p
 dataflow:>stream deploy --name time-to-string --properties "deployer.time-sink.cloudfoundry.services=my_mysql"
 ````
 
-##Working with MySQL on CF
+## Working with MySQL on CF
 You can find more information on how to setup/access a mySql instance [here](https://docs.run.pivotal.io/devguide/deploy-apps/ssh-services.html).
 
 
